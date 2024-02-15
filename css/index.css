@@ -1,0 +1,659 @@
+/*start variable*/
+:root{
+  --main-color:#19c8fa;
+  --other-color:rgb(131, 85, 11);
+}
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  
+  padding: 0;
+  margin :0;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+font-family:"open Sans",sans-serif;
+background-color: rgb(245, 241, 241);
+
+}
+/* start component*/
+
+
+.heading-name{
+  text-align: center;
+padding: 100px;
+}
+
+ .heading-name h2{
+font-weight: normal;
+font-size: 40px;
+position: relative;
+margin-bottom: 70px;
+text-transform: uppercase;
+ }
+ .heading-name h2::before{
+ content: '';
+ position: absolute;
+ left: 50%;
+ transform: translateX(-50%);
+ height: 2px;
+ width: 120px;
+ background-color: #333;
+ bottom: -30px;
+ }
+ .heading-name h2::after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 14px;
+  width: 14px;
+border-radius: 50%;
+border:2px solid #333;
+bottom: -38px;
+background-color: white;
+
+  
+
+ }
+
+ .heading-name p{
+width: 550px;
+margin: 0 auto 100px;
+max-width: 100%;
+line-height: 2;
+color: #777;
+ }
+
+
+
+
+ul{
+  list-style: none;
+}
+
+.container{
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+ 
+  background-color:transparent;
+}
+img{
+  height: 50px;
+}
+header{
+position: absolute;
+z-index: 2;
+left: 0%;
+width: 100%;
+
+
+}
+header .container{
+  display: flex;
+justify-content: space-between;
+align-items:center ;
+position: relative;
+}
+header .container::after {
+  content: "";
+  position: absolute;
+  height:2px;
+  background-color: #a2a2a2;
+  bottom:0 ;
+  width: calc(100% - 30px);
+  left: 15px;
+}
+header nav{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li a {
+ display: block;
+  display: flex;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s ;
+  color: aliceblue;
+  padding:40px 10px ;
+  position: relative;
+  z-index: 2;
+}
+header nav ul li a.active,
+header nav ul li a:hover{
+  color:var(--other-color);
+  border-bottom:2px solid var(--other-color);
+}
+
+header nav .toggle-menu{
+  color: white;
+  font-size: 22px;
+}
+@media(min-width:768px){
+  header nav .toggle-menu{
+    display: none;
+  }
+}
+
+.landing{
+  background-image: url('../css/images/owl-orange-eyes-birds-black-background-wallpaper-preview.jpg');
+  background-color: black;
+  background-size: cover;
+  min-height: 100vh;
+ margin-top: 0%;
+  
+}
+.landing .overlay{
+   position: absolute;
+    top: 0;
+   height: 100%;
+   width: 100%;
+   left: 0;
+  
+background-color:rgb(0 0 0 / 60%) ;
+}
+.text {
+  position: absolute;
+  left: 0;
+  width: 40%;
+  
+ margin-top: 270px;
+  background-color: rgb(131, 85, 11);
+  opacity: 70%;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: flex-end;
+}
+.content{
+  padding: 40px;
+max-width: 500px;
+}
+.landing .text .content h2{
+font-size: 30px;
+ line-height: 1;
+ font-weight: normal ;
+ margin-bottom: 20px;
+}
+.landing .text .content p{
+line-height: 1.6;
+font-size: 16px;
+}
+  .landing .change-background{
+    position: absolute;
+    top: 50%;
+    color: #ddd;
+  }
+  .landing .fa-angle-left{
+    left: 30px;
+  }
+  .landing .fa-angle-right{
+    right: 30px; 
+  }
+.bullets{
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+bottom: 30px;
+display: flex;
+}
+
+.bullets li{
+width: 20px;
+height: 20px;
+border: 1px solid white;
+border-radius: 50%;
+margin-right: 10px;
+
+}
+.bullets li.active{
+background-color: var(--other-color);
+border-color:var(--other-color); ;
+}
+
+.bullets li:hover {
+
+  background-color: var(--other-color);
+  border-color:var(--other-color); ;
+  }
+
+  @media(max-width: 400px){
+
+  .landing .text{
+   width: 100%;
+  }
+  
+  }
+  .servises-container{
+   
+   display: grid;
+  
+    
+ 
+
+  }
+  .servises-container .srv-box{
+ 
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  margin-right: 70px;
+   
+    
+  }
+  .servises-container .srv-box i{
+ margin-bottom: 20px;
+ margin-right: 70px;
+  
+    
+  }
+
+  .servises-container .srv-box h3{
+ color: var(--other-color);
+ margin-bottom: 30px;
+  }
+  .servises-container .srv-box p{
+ color: #777;
+ line-height: 2;
+  }
+  .servises-container .text2{
+   
+   justify-content: center;
+    gap: 1rem;
+ 
+    
+  }
+  .section2{
+    background-image: url('../css/images/Digital-Marketing-Explained_Blog-scaled.jpeg');
+    background-size: cover;
+    height: 600px; 
+     position: relative;
+  }
+
+ .section2 .overlay{
+position: absolute;
+  background-color:var(--main-color);
+height: 250px;
+width: 60%;
+color: black;
+font-weight:bolder;
+ opacity: 50%;
+padding: 20px;
+line-height: 2;
+ display: flex;
+ flex-direction: column;
+right: 0%;
+top: 250px;
+
+ 
+ 
+
+ }
+  .section2 .overlay i{
+    margin-right: 20px;
+  }
+
+  .images{
+   display: flex;
+   flex-wrap: wrap;
+     flex-basis: 25%;
+ 
+   margin-top: 20px;
+   overflow: hidden;
+ 
+
+
+ 
+ 
+
+  }
+  .images .box{
+
+ flex-basis: 25%;
+ position: relative;
+  }
+  .images .box img{
+ width: 400px;
+  max-width: 100%;
+  min-height: 333px;
+  
+ 
+  
+  
+  }
+  .caption{overflow: hidden;
+    position: absolute;
+    transition: 0.3s;
+    padding: 20px;
+    left: 0;
+    background-color: white;
+   width: 100%;
+    bottom: -100px;
+   
+    
+  
+  }
+  .images .box:hover img{
+    transform: rotateX(10deg);
+   
+    transform-style: preserve-3d;
+    transition: 0.3s;
+    
+    }
+    .images .box:hover .caption{
+     bottom: 0;
+    }
+  
+  @media(min-width: 768px){
+    .images .box {
+     flex-basis: 50%;
+    }}
+    @media(min-width: 1199px){
+      .images .box {
+       flex-basis: 25%;
+      }
+
+  }
+
+
+  .vedio{
+
+    background-size: cover;
+    height: 600px; 
+ overflow: hidden;
+     position: relative;
+  }
+.separate{
+ height: 100px;
+  background-color: white;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.separate button{
+ width: 100px;
+ height: 50px;
+  background-color:var(--other-color);
+
+}
+
+  .vedio{
+    background-image: url('../css/images/bigstock-d-Rendering-Astronaut-Walkin-295603309-1024x576.jpg');
+ 
+    background-size: cover;
+    min-height: 100vh;
+    margin-top: 40px;
+  }
+.vedio .overlay{
+ width: 100%;
+height: 300px;
+background-color:var(--other-color);
+opacity: 50%;
+color: white;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+line-height: 2;
+font-weight: bolder;
+margin-top: 150px;
+
+}
+.vedio .overlay button{
+  margin-top: 20px;
+  background-color: #333;
+  color: white;
+  height: 40px;
+  width: 100px;
+}
+.rates-container{
+  background-image: url('../css/images/3d-grunge-room-interior-with-spotlight-smoky-atmosphere-background_1048-11333.avif');
+  background-size: cover;
+  min-height: 100vh;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.rates-container .rates{
+ background-color: white;
+
+ opacity: 50%;
+ width: 80%;
+ display: flex;
+ flex-direction: row;
+ height: 40vh;
+ justify-content: center;
+ align-items: center;
+ align-content: center;
+
+}
+.rates-container .rates .box{
+flex-basis: 25%;
+font-weight: 450px;
+padding: 20px;
+
+}
+.rates-container .rates .box i{
+  margin-left:60px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+.rates-container .rates .box .number{
+  font-size: 80px;
+  color: var(--main-color);
+}
+.rates-container .rates .box p{
+  font-weight: 400;
+ padding-left: 25px;
+ align-items: center;
+}
+@media(min-width: 768px){
+  .rates-container .rates .box{
+    flex-basis: 100%;
+  }
+}
+@media(min-width:992px){
+  .rates-container .rates .box{
+    flex-basis: 50%;
+  }
+}
+@media(min-width:1199px){
+  .rates-container .rates .box{
+    flex-basis: 25%;
+  }
+}
+.pricing .plans{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+align-content: center;
+
+line-height: 4;
+border-top: 1px solid #19c8fa;
+}
+.pricing .plans .plan{
+  align-items: center;
+  display: grid;
+  justify-content: center;
+  flex-basis: 25%;
+}
+
+.head span{
+  font-size:60px;
+  background-color: #fcfcfc;
+  border-bottom: 1px solid #19c8fa;
+
+}
+.pricing .plans .plan .head h3{
+padding-left: 30px;
+  
+}
+.pricing .plans .plan .head span::before{
+  content: "$";
+  font-size: 35px;
+position: relative;
+margin-bottom: 20px;
+}
+.pricing .plans .plan .head span::after{
+  content: "/MO";
+  font-size: 25px;
+}
+.pricing .plans .plan ul li {
+ border-bottom:1px solid #19c8fa ;
+}
+.pricing .plans .plan button{
+  border:  2px solid #19c8fa;
+  background-color: #19c8fa;
+  
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 25px;
+}
+@media(min-width: 768px){
+  .pricing .plans .plan{
+    flex-basis: 100%;
+  }
+}
+@media(min-width:992px){
+  .pricing .plans .plan{
+    flex-basis: 50%;
+  }
+}
+@media(min-width:1199px){
+  .pricing .plans .plan{
+    flex-basis: 25%;
+  }
+}
+.contactus{
+  height: 300px;
+  background-color: #fcfcfc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+line-height: 2;
+font-weight: 600;
+
+
+}
+.contactus p{
+  margin: 20px;
+  font-size: 30px;
+}
+.contactus button{
+  background-color: var(--main-color);
+  font-weight: 500;
+height: 60px;
+width: 150px;
+  border: 2px solid black;
+  font-size: 15px;
+}
+.mail{
+  height: 300px;
+  background-image: url(../css/images/moon.webp);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mail p{
+ color: white;
+ font-size:15px ;
+ font-weight: bolder;
+ padding-left: 15px;
+
+}
+.mail input{
+  height: 80px;
+  width: 500px;
+}
+.mail button{
+  height: 80px;
+  width: 100px;
+
+  background-color: #19c8fa;
+}
+.data{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+.data input{
+  height: 80px;
+  width: 700px;
+  margin: 20px;
+  border:2px solid #19c8fa;
+  border-radius: 25px 10px 25px 10px ;
+
+}
+
+.data .sms{
+  height: 120px;
+}
+
+.data button{
+  height: 80px;
+  width: 100px;
+
+  background-color: #19c8fa;
+  border: #19c8fa;
+  border-radius: 25px 10px 25px 10px ;
+  
+}
+.footer{
+  background-image: url(../css/images/moon.webp);
+  background-size: cover;
+  height: 300px;
+  margin-top: 20px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+line-height: 4;
+color: white;
+font-size: larger;
+}
+.footer p{
+  border-bottom: 2px solid  white;
+}
+.footer .icons img{
+height: 35px;
+}
+
+.footer
+/*end landing*/
+/*for mobile phones*/
+/*@media(min-width: 768px){
+ .container{
+  width:750px ;
+ }
+}*/
+/*for medium 
+/*@media(min-width: 992px){
+
+  .container{
+    width:970px ;
+   }
+}
+/*for large screen */
+@media(min-width: 1200px){
+
+  .container{
+    width:1170px ;
+   }
+}
