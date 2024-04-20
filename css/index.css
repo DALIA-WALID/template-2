@@ -24,7 +24,7 @@ background-color: rgb(245, 241, 241);
 
 .heading-name{
   text-align: center;
-padding: 100px;
+padding: 50px;
 }
 
  .heading-name h2{
@@ -80,7 +80,7 @@ ul{
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
- 
+ width: 900px;
   background-color:transparent;
 }
 img{
@@ -110,10 +110,11 @@ header .container::after {
   left: 15px;
 }
 header nav{
-  flex: 1;
+ flex: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+ 
 }
 header nav ul {
   display: flex;
@@ -131,8 +132,8 @@ header nav ul li a {
 }
 header nav ul li a.active,
 header nav ul li a:hover{
-  color:var(--other-color);
-  border-bottom:2px solid var(--other-color);
+  color:var(--main-color);
+  border-bottom:2px solid #19c8fa;
 }
 
 header nav .toggle-menu{
@@ -146,7 +147,8 @@ header nav .toggle-menu{
 }
 
 .landing{
-  background-image: url('../css/images/owl-orange-eyes-birds-black-background-wallpaper-preview.jpg');
+  background-image: url('../images/astrronaut.jpg');
+
   background-color: black;
   background-size: cover;
   min-height: 100vh;
@@ -168,9 +170,9 @@ background-color:rgb(0 0 0 / 60%) ;
   width: 40%;
   
  margin-top: 270px;
-  background-color: rgb(131, 85, 11);
-  opacity: 70%;
-  color: rgb(255, 255, 255);
+background-color: var(--main-color); 
+ opacity: 70%;
+  color: black;
   display: flex;
   justify-content: flex-end;
 }
@@ -216,27 +218,100 @@ margin-right: 10px;
 
 }
 .bullets li.active{
-background-color: var(--other-color);
-border-color:var(--other-color); ;
+background-color: var(--main-color);
+border-color:var(--main-color); 
 }
 
 .bullets li:hover {
 
-  background-color: var(--other-color);
-  border-color:var(--other-color); ;
+  background-color: var(--main-color);
+  border-color:var(--main-color); ;
   }
 
-  @media(max-width: 400px){
 
-  .landing .text{
-   width: 100%;
+  @media  screen and (max-width: 992px) and (min-width:800px){
+  .container{
+   width: auto;
+   justify-content: center;
+   align-content: center;
+   align-items: center;
+
+
+    
+  }
+
+ 
+  .content{
+  max-height: 290px;
+
+  overflow: hidden;
+ 
   }
   
+.text{width: fit-content;
+margin-top: 220px;
+}
+header .container::after {
+
+
+}
+
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+}
+
+@media  screen and (max-width: 800px) and (min-width:600px){
+  .container{
+ width: 100%;
+ 
+        
+      }
+      header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .text{width: fit-content;
+        margin-top: 220px;
+        }
+
+
+}
+  @media only screen and (max-width: 600px) {
+
+    
+
+    .content{
+    max-height: 290px;
+  
+    overflow: hidden;
+   
+    }
+  .text{width: fit-content;
+  margin-top: 220px;
+  }
+  header .container::after {
+  display: none;
+  
+  }
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1px;
+  }
+  header img{
+    height: 20px;
+  }
   }
   .servises-container{
    
    display: grid;
-  
+
     
  
 
@@ -245,20 +320,21 @@ border-color:var(--other-color); ;
  
   display: flex;
   flex-direction: row;
-  margin-bottom: 20px;
-  margin-right: 70px;
+  margin-bottom: 50px;
+  margin-right: 50px;
+  text-align: center;
    
     
   }
   .servises-container .srv-box i{
  margin-bottom: 20px;
  margin-right: 70px;
+
   
-    
   }
 
   .servises-container .srv-box h3{
- color: var(--other-color);
+ color: var(--main-color);
  margin-bottom: 30px;
   }
   .servises-container .srv-box p{
@@ -272,21 +348,44 @@ border-color:var(--other-color); ;
  
     
   }
-  .section2{
-    background-image: url('../css/images/Digital-Marketing-Explained_Blog-scaled.jpeg');
-    background-size: cover;
-    height: 600px; 
-     position: relative;
+  @media  screen and (max-width: 900px) {
+    .container{
+      width:100%
+    }
+    .servises-container .srv-box i{
+    
+      margin-right: 10px;
+       
+         
+       }
+       .servises-container .srv-box{
+        display: flex;
+        flex-direction: column;
+       margin: 20px;
+        
+       }
+       .servises-container .srv-box{}
   }
 
+  .section2{
+  
+    background-size: cover;
+   
+     position: relative;
+     width: 100%;
+     height: 100%;
+     overflow: hidden;
+  }
+
+ 
  .section2 .overlay{
 position: absolute;
-  background-color:var(--main-color);
+  background-color:black;
 height: 250px;
 width: 60%;
-color: black;
+color: rgb(255, 255, 255);
 font-weight:bolder;
- opacity: 50%;
+ opacity: 70%;
 padding: 20px;
 line-height: 2;
  display: flex;
@@ -300,6 +399,9 @@ top: 250px;
  }
   .section2 .overlay i{
     margin-right: 20px;
+  }
+  .section2.vedio{
+    width: 100% !important;
   }
 
   .images{
@@ -330,6 +432,14 @@ top: 250px;
   
   
   }
+
+
+  @media (max-width:900px) {
+    .images{
+      flex-basis: 50%;
+    }
+    
+  }
   .caption{overflow: hidden;
     position: absolute;
     transition: 0.3s;
@@ -345,7 +455,7 @@ top: 250px;
   .images .box:hover img{
     transform: rotateX(10deg);
    
-    transform-style: preserve-3d;
+    transform-style: preserve-3d	;
     transition: 0.3s;
     
     }
@@ -353,24 +463,39 @@ top: 250px;
      bottom: 0;
     }
   
-  @media(min-width: 768px){
-    .images .box {
-     flex-basis: 50%;
-    }}
-    @media(min-width: 1199px){
+
+    @media(max-width: 1199px){
       .images .box {
-       flex-basis: 25%;
+       flex-basis: 50%;
+       
+      }
+      .images .box img{
+        width: 100%
       }
 
+     
+
   }
+  @media(max-width: 600px){
+    .images .box {
+     flex-basis: 100%;
+     
+    }
+    .images .box img{
+      width: 100%
+    }
+
+   
+
+}
 
 
   .vedio{
 
     background-size: cover;
-    height: 600px; 
+    height: 100%;
  overflow: hidden;
-     position: relative;
+     position: relative;width: 100%;
   }
 .separate{
  height: 100px;
@@ -383,21 +508,15 @@ top: 250px;
 .separate button{
  width: 100px;
  height: 50px;
-  background-color:var(--other-color);
+  background-color:var(--main-color);
 
 }
 
-  .vedio{
-    background-image: url('../css/images/bigstock-d-Rendering-Astronaut-Walkin-295603309-1024x576.jpg');
  
-    background-size: cover;
-    min-height: 100vh;
-    margin-top: 40px;
-  }
 .vedio .overlay{
  width: 100%;
-height: 300px;
-background-color:var(--other-color);
+height: 200px;
+background-color:var(--main-color);
 opacity: 50%;
 color: white;
 display: flex;
@@ -406,7 +525,7 @@ align-items: center;
 justify-content: center;
 line-height: 2;
 font-weight: bolder;
-margin-top: 150px;
+margin-top: 100px;
 
 }
 .vedio .overlay button{
@@ -415,6 +534,19 @@ margin-top: 150px;
   color: white;
   height: 40px;
   width: 100px;
+}
+
+.vedio .overlay button :target{
+  .vedio .overlay{
+    display: none;
+  }
+
+}
+.vedio .vedio1{
+  position: absolute;
+  
+  width: 100%;
+  height: 100%;
 }
 .rates-container{
   background-image: url('../css/images/3d-grunge-room-interior-with-spotlight-smoky-atmosphere-background_1048-11333.avif');
@@ -443,37 +575,91 @@ margin-top: 150px;
 flex-basis: 25%;
 font-weight: 450px;
 padding: 20px;
-
+display: flex;
+flex-direction: column;
+align-content: center;
+justify-content: center;
+text-align: center;
 }
 .rates-container .rates .box i{
-  margin-left:60px;
+ 
   margin-bottom: 30px;
   align-items: center;
+  justify-content: center;
 }
 .rates-container .rates .box .number{
   font-size: 80px;
   color: var(--main-color);
 }
 .rates-container .rates .box p{
-  font-weight: 400;
- padding-left: 25px;
+  font-weight: 500;
+
  align-items: center;
-}
-@media(min-width: 768px){
-  .rates-container .rates .box{
-    flex-basis: 100%;
-  }
-}
-@media(min-width:992px){
-  .rates-container .rates .box{
-    flex-basis: 50%;
-  }
 }
 @media(min-width:1199px){
   .rates-container .rates .box{
     flex-basis: 25%;
   }
 }
+@media(max-width:1200px){
+  .rates-container .rates .box{
+    flex-basis: 50%;
+
+  }
+
+  .rates-container .rates .box{
+  flex-basis: 50%;
+  font-weight: 350px;
+  padding: 10px;
+  flex-wrap: wrap;
+  
+  }
+  .rates-container .rates .box i{
+ 
+    margin-bottom: 30px;
+    align-items: center;
+  }
+  .rates-container .rates .box .number{
+    font-size: 40px;
+  
+  }
+  .rates-container .rates .box p{
+    font-weight: 400;
+   padding-left: auto;
+   
+   
+  }
+  
+}
+
+@media(max-width: 770px){
+  .rates-container .rates .box{
+    flex-basis: 50%;
+  }
+  .rates-container .rates{
+ 
+    flex-wrap: wrap;
+    
+       }
+       .rates-container .rates{
+        height: max-content;
+       }
+}
+
+@media(max-width: 550px){
+  .rates-container .rates .box{
+    flex-basis: 100%;
+  }
+  .rates-container .rates{
+ 
+    flex-wrap: wrap;
+    
+       }
+       .rates-container .rates{
+        height: max-content;
+       }
+}
+
 .pricing .plans{
 display: flex;
 flex-direction: row;
@@ -484,6 +670,7 @@ align-content: center;
 line-height: 4;
 border-top: 1px solid #19c8fa;
 }
+
 .pricing .plans .plan{
   align-items: center;
   display: grid;
@@ -499,6 +686,8 @@ border-top: 1px solid #19c8fa;
 }
 .pricing .plans .plan .head h3{
 padding-left: 30px;
+padding-top: 15px;
+color: #19c8fa;
   
 }
 .pricing .plans .plan .head span::before{
@@ -515,18 +704,15 @@ margin-bottom: 20px;
  border-bottom:1px solid #19c8fa ;
 }
 .pricing .plans .plan button{
-  border:  2px solid #19c8fa;
-  background-color: #19c8fa;
-  
+color: #19c8fa;
+margin-bottom: 30px;
+
+  background-color: #333;
   font-size: 20px;
   font-weight: 500;
   margin-top: 25px;
 }
-@media(min-width: 768px){
-  .pricing .plans .plan{
-    flex-basis: 100%;
-  }
-}
+
 @media(min-width:992px){
   .pricing .plans .plan{
     flex-basis: 50%;
@@ -536,6 +722,31 @@ margin-bottom: 20px;
   .pricing .plans .plan{
     flex-basis: 25%;
   }
+}@media(max-width: 678px){
+  .pricing .plans{
+   display: flex;
+   flex-direction: row;
+   
+   
+    flex-wrap: wrap;
+  }
+  .pricing .plans .plan{
+    flex-basis: 50%;
+  }
+}
+
+@media(max-width: 450px){
+  .pricing .plans{
+    display: flex;
+    flex-direction: row;
+    
+    
+     flex-wrap: wrap;
+   }
+   .pricing .plans .plan{
+    width: 100%;
+     flex-basis: 100%;
+   }
 }
 .contactus{
   height: 300px;
@@ -561,18 +772,29 @@ width: 150px;
   border: 2px solid black;
   font-size: 15px;
 }
+@media(max-width: 650px){
+  .contactus p{
+    margin: 20px;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+
 .mail{
   height: 300px;
   background-image: url(../css/images/moon.webp);
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .mail p{
  color: white;
  font-size:15px ;
- font-weight: bolder;
- padding-left: 15px;
+ padding: 15px;
+ width: 400px;
+ text-align: center;
 
 }
 .mail input{
@@ -585,38 +807,78 @@ width: 150px;
 
   background-color: #19c8fa;
 }
+.mail button :hover{
+  color: #333;
+}
+@media(max-width: 687px){
+  .mail p{
+    display: none;
+  }
+  .mail input{
+    height: 80px;
+    width: 300px;
+  }
+  .mail button{
+    height: 80px;
+    width: 65px;}
+}
 .data{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   
   
+}
+.data .heading{
+  padding: 30px;
+}
+input::placeholder {
+  color: var(--main-color); /* Example style for the placeholder text */
+  
+
+text-align: center;
 }
 .data input{
   height: 80px;
   width: 700px;
   margin: 20px;
   border:2px solid #19c8fa;
-  border-radius: 25px 10px 25px 10px ;
+  box-shadow: 5px 10px 50px 5px  #103640;
+
 
 }
 
-.data .sms{
-  height: 120px;
-}
 
 .data button{
   height: 80px;
-  width: 100px;
+  width: 200px;
 
   background-color: #19c8fa;
   border: #19c8fa;
   border-radius: 25px 10px 25px 10px ;
   
 }
+@media(max-width: 800px){
+  .data input{
+    
+    width: 500px;
+    margin: 20px;
+  
+  }
+}
+@media(max-width: 630px){
+  .data input{
+    
+    width: 330px;
+    margin: 20px;
+  
+  }
+}
+
 .footer{
-  background-image: url(../css/images/moon.webp);
+  background-image: url(../images/astrronaut.jpg);
   background-size: cover;
   height: 300px;
   margin-top: 20px;
